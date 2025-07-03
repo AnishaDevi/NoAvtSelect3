@@ -197,13 +197,18 @@ return (
       <Card>
         <CardBody className="h-[500px] flex flex-col justify-center items-center">
           {stream ? (
+
             <div className="h-[500px] w-[900px] justify-center items-center flex rounded-lg overflow-hidden">
+              
               <video
                 ref={mediaStream}
                 autoPlay
                 playsInline
-                style={{ width: "100%", height: "100%", objectFit: "contain" }}
-              />
+                style={{ width: "100%", height: "100%", objectFit: "contain" }}>
+
+                <track kind="captions" srcLang="en" label="English captions" />
+                </video>
+           
               <div className="flex flex-col gap-2 absolute bottom-3 right-3">
                 <Button
                   className="bg-gradient-to-tr from-indigo-500 to-indigo-300 text-white rounded-lg"
