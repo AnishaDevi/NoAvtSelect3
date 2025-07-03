@@ -96,7 +96,9 @@ const TEXT = `
 
     return (
       <div className="w-full">
-        <video playsInline autoPlay width={500} ref={mediaStream}/>
+        <video playsInline autoPlay width={500} ref={mediaStream}>
+          <track kind="captions" srcLang="en" label="English captions" />
+        </video>
       </div> 
     )
   }`;
